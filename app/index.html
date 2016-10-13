@@ -7,7 +7,6 @@
         body {
             margin: 0;
         }
-
         textarea {
             width: 100%;
             border: none;
@@ -16,12 +15,372 @@
             padding: 0;
             outline: none;
         }
+        .BtnBox{
+            text-align:center;
+            padding:5px 0 5px 0;
+        }
+        dt,dl,dd{margin:0;padding:0;}
+
+        .fontweight{font-weight:700;}
+
+        textarea{text-indent:2em;}
+
     </style>
+    <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
-<textarea rows="10"></textarea>
-<button>Write</button>
+<div class="BtnBox">
+    <button id="edit">编辑</button>
+    <button id="preview">预览</button>
+    <button id="copy">复制</button>
+</div>
+<div class="wrap" id="editBox" style="width:800px;margin:0 auto;">
+    <h2>01区域</h2>
+    <form role="form">
+        <div class="form-group">
+            <label for="inputTitle">标题</label>
+            <input type="text" class="form-control" id="inputTitle" placeholder="标题">
+        </div>
+        <div class="form-group">
+            <label for="inputJia">分享嘉宾</label>
+            <input type="text" class="form-control" id="inputJia" placeholder="例如：XXX">
+        </div>
+        <div class="form-group">
+            <dl class="shareContext">
+                <dt class="fontweight">分享内容</dt>
+                <dd>
+                    <label>段落1</label>
+                    <textarea name="form-control" id="" cols="30" rows="3"></textarea>
+                </dd>
+                <dd>
+                    <label>段落2</label>
+                    <textarea name="form-control" id="" cols="30" rows="3"></textarea>
+                </dd>
+                <dd>
+                    <label>段落3</label>
+                    <textarea name="form-control" id="" cols="30" rows="3"></textarea>
+                </dd>
+                <dd>
+                    <label>段落4</label>
+                    <textarea name="form-control" id="" cols="30" rows="3"></textarea>
+                </dd>
+            </dl>
+            <dl class="shareQuestion">
+                <dt class="fontweight">分享内容问题Q</dt>
+                <dd>
+                    <label>问题1</label>
+                    <textarea name="form-control" id="" cols="30" rows="3"></textarea>
+                </dd>
+                <dd>
+                    <label>问题2</label>
+                    <textarea name="form-control" id="" cols="30" rows="3"></textarea>
+                </dd>
+                <dd>
+                    <label>问题3</label>
+                    <textarea name="form-control" id="" cols="30" rows="3"></textarea>
+                </dd>
+            </dl>
+        </div>
+        <div class="form-group">
+            <label for="inputTime">时间</label>
+            <input type="text" class="form-control" id="inputTime" placeholder="时间">
+        </div>
+        <div class="form-group">
+            <label for="inputAddress">地点</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="地点">
+        </div>
+        <div class="form-group">
+            <label for="inputPeople">人员</label>
+            <input type="text" class="form-control" id="inputPeople" placeholder="人员">
+        </div>
+        <div class="form-group">
+            <label for="inputbmAdress">报名地址</label>
+            <input type="text" class="form-control" id="inputbmAdress" placeholder="报名地址">
+        </div>
+    </form>
+</div>
+<div class="wrap" id="previewBox" style="display:none;">
+    <table class="module-wrap J_tb_img" border="0" cellpadding="0" cellspacing="0" style="display:block;margin:0 auto;padding:0;width:800px;">
+        <tbody>
+        <tr>
+            <td style="line-height: 0px; padding:0px; margin:0px;">
+                <img src="http://cbu01.alicdn.com/cms/upload/2016/492/787/2787294_1372342860.jpg" alt="" border="0" style="display:block;border:0"/>
+            </td>
+        </tr>
+        <tr>
+            <td style="line-height: 0px; padding:0px; margin:0px;">
+                <img src="http://cbu01.alicdn.com/cms/upload/2016/572/397/2793275_1372342860.jpg" alt="" border="0" style="display:block;border:0"/>
+            </td>
+        </tr>
+        <tr>
+            <td style="line-height: 0px; padding:0px; margin:0px;">
+                <img src="http://cbu01.alicdn.com/cms/upload/2016/152/187/2781251_1372342860.jpg" alt="" border="0" style="display:block;border:0"/>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <table class="module-wrap J_tb_firstArea" border="0" cellpadding="0" cellspacing="0"  style="margin:0 auto;width:800px;border-collapse:collapse;border-spacing:0;border:0;background-color:#ffffff;;" id="01">
+        <tbody><tr>
+            <td style="padding:10px 30px;">
+                <table style="width:100%;border-collapse:collapse;border-spacing:0;border:0;">
+                    <tbody>
+                    <tr style="height:120px;background:url(img/titlebg.jpg) repeat-x 0 66px;text-align:center;">
+                        <td style="background-color:#ffffff;;display:inline-block;height:120px;padding:0 20px;">
+                            <div style="font-size:92px;line-height:100px;padding:0;font-family:arial, serif;font-weight:700;color:#182aca;height:58px;overflow:hidden;">01</div>
+                            <h3 style="color:#2A29B3;font-size:22px;margin:0;padding:0;">《<span class="title">第36期移动事业部6年国际化之路</span>》</h3>
+                            <div style="color:#2A29B3;font-weight:100;font-size:16px;">------分享嘉宾：<span class="person">黄浩</span></div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <table class="module-wrap J_tb_share" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:800px;border-collapse:collapse;border-spacing:0;">
+    <tbody class="text-list" style="text-align:left;">
+    <tr>
+        <td style="line-height:22px;padding:10px 0;font-size:14px;text-indent:2em;font-size:16px;">浏览器是Web页面流量入口，在印度、印尼两个人口总量超15亿的国家获得超过50%的web流量控制力；应用商店是应用发行流量入口，9APPS在印度与Google Play二分天下。这是谁呢？答案当然是咱们的UC浏览器！</td>
+    </tr>
+
+    <tr>
+        <td style="line-height:22px;padding:10px 0;font-size:14px;text-indent:2em;font-size:16px;">“脚踏实地 仰望星空” 6年前即2010年，UC在国内还面临很大的竞争压力的情况下，非常坚定地要做国际化---“服务一半地球人”在UC给予的答卷背后，作为中国最早出海的移动互谅网企业，大家也许会有好多好奇的关键词跳出脑海：国际化、本土化作战经验、本土化人才管理等等。</td>
+    </tr>
+
+    <tr>
+        <td style="line-height:22px;padding:10px 0;font-size:14px;text-indent:2em;font-size:16px;">黄浩作为UC国际业务的总负责人这三年最大的感受是：一直在自我挑战中，不断地挑战和调整自己的心态、思维方式、工作方式。这三年一路走来在业务上最大的感触是“中国崛起，在移动互联网的大航海时代，中国产品和团队越来越强大”。</td>
+    </tr>
+
+    <tr>
+        <td style="line-height:22px;padding:10px 0;font-size:14px;text-indent:2em;font-size:16px;">7月26日，黄浩特地为组织部夜校同学而来，分享国际化的那些故事和经验。</td>
+    </tr>
+    </tbody>
+    </table>
+    <table class="module-wrap J_tb_shareQ" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:800px;border-collapse:collapse;border-spacing:0;">
+        <tbody class="text-list" style="text-align:left;">
+        <tr>
+            <td style="line-height:22px;padding:10px 0;font-size:14px;text-indent:2em;color:#2331ea;font-weight:700;padding-left:30px;width:600px;">Q：在6年的国际化旅途上，面对各类对手如猎豹、360、百度的激烈竞争，到底要采取什么样的定位和业务选择？</td>
+        </tr>
+
+        <tr>
+            <td style="line-height:22px;padding:10px 0;font-size:14px;text-indent:2em;color:#2331ea;font-weight:700;padding-left:30px;width:500px;">Q：在6年的国际化旅途上，经历了哪些战术又沉淀了什么样的经验？</td>
+        </tr>
+
+        <tr>
+            <td style="line-height:22px;padding:10px 0;font-size:14px;text-indent:2em;color:#2331ea;font-weight:700;padding-left:30px;width:600px;">Q：移动事业群国际化的业务现状又如何与集团各业务国际化协同作战？</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <table class="module-wrap J_tb_lazyload" border="0" cellpadding="0" cellspacing="0"  style="margin:0 auto;width:800px;background-color:#1a41aa;color:#ffffff;">
+        <tbody>
+        <tr>
+            <td style="padding:15px 30px;">
+                <table style="width:100%;">
+                    <tbody><tr>
+                        <td style="width:68%;border-right:2px solid #bbbbbb;">
+
+                            <div style="height:30px;line-height:30px;">
+                                <span style="display:inline-block;width:80px;height:26px;line-height:26px;vertical-align:middle;border-radius:3px;text-align:center;background-color:#f7f409;color:#000;font-size:16px;font-weight:100;">时 间：</span>
+                                <span style="display:inline-block;height:28px;vertical-align:middle;font-size:16px;font-weight:100;text-align:left;color:#ffffff;margin-left:10px;">9月15日（星期二） 19:00---21:00</span>
+                            </div>
+
+                            <div style="height:30px;line-height:30px;">
+                                <span style="display:inline-block;width:80px;height:26px;line-height:26px;vertical-align:middle;border-radius:3px;text-align:center;background-color:#f7f409;color:#000;font-size:16px;font-weight:100;">地 点：</span>
+                                <span style="display:inline-block;height:28px;vertical-align:middle;font-size:16px;font-weight:100;text-align:left;color:#ffffff;margin-left:10px;">杭州西溪园区：1-3-5 S</span>
+                            </div>
+
+                            <div style="height:30px;line-height:30px;">
+                                <span style="display:inline-block;width:80px;height:26px;line-height:26px;vertical-align:middle;border-radius:3px;text-align:center;background-color:#f7f409;color:#000;font-size:16px;font-weight:100;">人 员：</span>
+                                <span style="display:inline-block;height:28px;vertical-align:middle;font-size:16px;font-weight:100;text-align:left;color:#ffffff;margin-left:10px;">全体组织部成员</span>
+                            </div>
+
+                        </td>
+                        <td style="width:30%;text-align:center;height:100%;vertical-align:middle;">
+                            <a href="http://xue.alibaba-inc.com/trs/detail.htm?trainId=c7a62fd5-8094-4ff1-895f-87cb3b864073" target="_blank" style="display:inline-block;height:56px;line-height:56px;background-color:#ff0000;color:#ffffff;font-size:18px;border-radius:3px;text-decoration:none;padding-right:25px;">
+                                <img src="https://img.alicdn.com/tps/TB1I5NhNXXXXXc7XVXXXXXXXXXX-45-32.png" style="width:32px;height:22px;display:inline-block;background-size:100%;margin: 0 15px;vertical-align: middle;">
+                                <span style="display:inline-block;vertical-align:middle;">点击报名 &gt;&gt;</span>
+                            </a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <table class="module-wrap J_tb_lazyload" border="0" cellpadding="0" cellspacing="0"  style="margin:0 auto;width:800px;border-collapse:collapse;border-spacing:0;border:0;background-color:#ffffff;;" id="01">
+        <tbody><tr>
+            <td style="padding:10px 30px;">
+                <table style="width:100%;border-collapse:collapse;border-spacing:0;border:0;">
+                    <tbody>
+                    <tr style="height:120px;background:url(img/titlebg.jpg) repeat-x 0 66px;text-align:center;">
+                        <td style="background-color:#ffffff;;display:inline-block;height:120px;padding:0 20px;">
+                            <div style="font-size:92px;line-height:100px;padding:0;font-family:arial, serif;font-weight:700;color:#182aca;height:58px;overflow:hidden;">02</div>
+                            <h3 style="color:#2A29B3;font-size:22px;margin:0;padding:0;">《上期回顾》</h3>
+                            <div style="color:#2A29B3;font-weight:100;font-size:16px;">THE REVIEW</div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <table class="module-wrap J_tb_lazyload"  border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;background-color:#f1eff0;width:800px;">
+        <tbody><tr>
+            <td style="width: 300px; height: 130px; padding: 15px 25px;">
+                <img src="https://img.alicdn.com/tps/TB1kWBvNXXXXXcDXVXXXXXXXXXX-608-268.png" style="width:100%;">
+            </td>
+            <td style="width: 350px; height: 154px; padding: 15px 25px;">
+                <img src="img/gus.jpg" style="width:100%;">
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 350px; height: 154px; padding: 15px 25px;">
+                <img src="https://img.alicdn.com/tps/TB11NX4NXXXXXXmXXXXXXXXXXXX-612-264.png" style="width:100%;">
+            </td>
+            <td style="width: 350px; height: 154px; padding: 15px 25px;">
+                <div style="text-indent:2em;font-size:14px;"><p>618一战大局是这样的，胜负手不是这一站，后面还有很多场仗，有很多是需要大家一直保持一个战争状态，天猫在过去一年时间，最大的改变，从骨子里面开始直面竞争，而且敬畏竞争，因为竞争意味着很多时候，你需要快速响应。</p><p style="color:#8ba2ee;">由于内容涉及竞争敏感信息，仅限于夜校现场学习！</p></div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+
+    <table class="module-wrap J_tb_threeArea" border="0" cellpadding="0" cellspacing="0"  style="margin:0 auto;width:800px;border-collapse:collapse;border-spacing:0;border:0;background-color:#d6d2e1;;" >
+        <tbody><tr>
+            <td style="padding:10px 30px;">
+                <table style="width:100%;border-collapse:collapse;border-spacing:0;border:0;">
+                    <tbody>
+                    <tr style="height:120px;background:url(img/titlebg.jpg) repeat-x 0 66px;text-align:center;">
+                        <td style="background-color:#d6d2e1;;display:inline-block;height:120px;padding:0 20px;">
+                            <div style="font-size:92px;line-height:100px;padding:0;font-family:arial, serif;font-weight:700;color:#182aca;height:58px;overflow:hidden;">03</div>
+                            <h3 style="color:#2A29B3;font-size:22px;margin:0;padding:0;">《<span class="title">湖畔夜校分享集锦</span>》</h3>
+                            <div style="color:#2A29B3;font-weight:100;font-size:16px;"><span class="person">SHARE HIGHLIGHTS</span></div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <table class="module-wrap J_tb_lazyload" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width:800px;background-color:#c5bed1;padding-bottom:10px;border-collapse:collapse;border-spacing:0;border:0;background-color:#d6d2e1;">
+        <tbody><tr>
+            <td>
+                <table style="width:100%;border-collapse:collapse;border-spacing:0;border:0;">
+
+                    <tbody><tr>
+                        <td style="width:140px;padding:20px 7px;text-align:center;">
+                            <a href="#" target="_blank" style="text-decoration:none;display:inline-block;text-align:center;">
+                                <img src="https://img.alicdn.com/tps/TB1Ya73MVXXXXb.aXXXXXXXXXXX-265-285.png" style="border:0;width:134px;height:142px;">
+                                <div style="width:140px;height:22px;line-height:22px;margin-top:20px;border-radius:3px;background-color:#1a41aa;color:#ffffff;text-align:center;font-size:12px;font-weight:100;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">集团战略&amp;从战略到执行</div>
+                            </a>
+                        </td>
+
+                        <td style="width:140px;padding:20px 7px;text-align:center;">
+                            <a href="#" target="_blank" style="text-decoration:none;display:inline-block;text-align:center;">
+                                <img src="https://img.alicdn.com/tps/TB1uoxeNXXXXXchaXXXXXXXXXXX-268-285.png" style="border:0;width:134px;height:142px;">
+                                <div style="width:140px;height:22px;line-height:22px;margin-top:20px;border-radius:3px;background-color:#1a41aa;color:#ffffff;text-align:center;font-size:12px;font-weight:100;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">蚂蚁金服的战略到执行</div>
+                            </a>
+                        </td>
+
+                        <td style="width:140px;padding:20px 7px;text-align:center;">
+                            <a href="#" target="_blank" style="text-decoration:none;display:inline-block;text-align:center;">
+                                <img src="https://img.alicdn.com/tps/TB1ny0NNXXXXXaVXXXXXXXXXXXX-263-285.png" style="border:0;width:134px;height:142px;">
+                                <div style="width:140px;height:22px;line-height:22px;margin-top:20px;border-radius:3px;background-color:#1a41aa;color:#ffffff;text-align:center;font-size:12px;font-weight:100;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">菜鸟的战略和执行</div>
+                            </a>
+                        </td>
+
+                        <td style="width:140px;padding:20px 7px;text-align:center;">
+                            <a href="#" target="_blank" style="text-decoration:none;display:inline-block;text-align:center;">
+                                <img src="https://img.alicdn.com/tps/TB1fmReNXXXXXXaapXXXXXXXXXX-268-285.png" style="border:0;width:134px;height:142px;">
+                                <div style="width:140px;height:22px;line-height:22px;margin-top:20px;border-radius:3px;background-color:#1a41aa;color:#ffffff;text-align:center;font-size:12px;font-weight:100;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">走进美国</div>
+                            </a>
+                        </td>
+
+                        <td style="width:140px;padding:20px 7px;text-align:center;">
+                            <a href="#" target="_blank" style="text-decoration:none;display:inline-block;text-align:center;">
+                                <img src="https://img.alicdn.com/tps/TB1BSlyNXXXXXaKXFXXXXXXXXXX-264-284.png" style="border:0;width:134px;height:142px;">
+                                <div style="width:140px;height:22px;line-height:22px;margin-top:20px;border-radius:3px;background-color:#1a41aa;color:#ffffff;text-align:center;font-size:12px;font-weight:100;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">从Facebook式协同看阿里</div>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="width:140px;padding:20px 7px;text-align:center;">
+                            <a href="#" target="_blank" style="text-decoration:none;display:inline-block;text-align:center;">
+                                <img src="https://img.alicdn.com/tps/TB12w4jNXXXXXXyaXXXXXXXXXXX-266-281.png" style="border:0;width:134px;height:142px;">
+                                <div style="width:140px;height:22px;line-height:22px;margin-top:20px;border-radius:3px;background-color:#1a41aa;color:#ffffff;text-align:center;font-size:12px;font-weight:100;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">探寻以色列科技创新系列二</div>
+                            </a>
+                        </td>
+
+                        <td style="width:140px;padding:20px 7px;text-align:center;">
+                            <a href="#" target="_blank" style="text-decoration:none;display:inline-block;text-align:center;">
+                                <img src="https://img.alicdn.com/tps/TB1fXJnNXXXXXcNXVXXXXXXXXXX-268-281.png" style="border:0;width:134px;height:142px;">
+                                <div style="width:140px;height:22px;line-height:22px;margin-top:20px;border-radius:3px;background-color:#1a41aa;color:#ffffff;text-align:center;font-size:12px;font-weight:100;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">阿里云大数据梦想</div>
+                            </a>
+                        </td>
+
+                        <td style="width:140px;padding:20px 7px;text-align:center;">
+                            <a href="#" target="_blank" style="text-decoration:none;display:inline-block;text-align:center;">
+                                <img src="https://img.alicdn.com/tps/TB1WI4fNXXXXXcUaXXXXXXXXXXX-263-281.png" style="border:0;width:134px;height:142px;">
+                                <div style="width:140px;height:22px;line-height:22px;margin-top:20px;border-radius:3px;background-color:#1a41aa;color:#ffffff;text-align:center;font-size:12px;font-weight:100;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">阿里云组织变革的那些故事</div>
+                            </a>
+                        </td>
+
+                        <td style="width:140px;padding:20px 7px;text-align:center;">
+                            <a href="#" target="_blank" style="text-decoration:none;display:inline-block;text-align:center;">
+                                <img src="https://img.alicdn.com/tps/TB1GiFoNXXXXXcwXFXXXXXXXXXX-268-281.png" style="border:0;width:134px;height:142px;">
+                                <div style="width:140px;height:22px;line-height:22px;margin-top:20px;border-radius:3px;background-color:#1a41aa;color:#ffffff;text-align:center;font-size:12px;font-weight:100;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">从业务到组织</div>
+                            </a>
+                        </td>
+
+                        <td style="width:140px;padding:20px 7px;text-align:center;">
+                            <a href="#" target="_blank" style="text-decoration:none;display:inline-block;text-align:center;">
+                                <img src="https://img.alicdn.com/tps/TB1PJ4PNXXXXXXIXXXXXXXXXXXX-265-281.png" style="border:0;width:134px;height:142px;">
+                                <div style="width:140px;height:22px;line-height:22px;margin-top:20px;border-radius:3px;background-color:#1a41aa;color:#ffffff;text-align:center;font-size:12px;font-weight:100;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">从业务到组织的转换实战</div>
+                            </a>
+                        </td>
+                    </tr>
+
+                    </tbody></table>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding:30px 0;text-align:center;">
+                <table style="border-collapse:collapse;border-spacing:0;border:0;margin-left:170px">
+                    <tbody><tr>
+                        <td style="width:150px;">
+                            <img src="https://img.alicdn.com/tps/TB1FZBbNXXXXXa5apXXXXXXXXXX-294-282.png" style="width:160px;height:160px;display:inline-block;">
+                        </td>
+                        <td style="width:150px;">
+                            <img style="width:80px;display:inline-block;margin:46px 30px;" src="https://img.alicdn.com/tps/TB1ChaVNXXXXXaRaXXXXXXXXXXX-247-176.png">
+                        </td>
+                        <td style="width:150px;">
+                            <div style="display:block;border:solid 10px #f2f2f2;background:#fff;">
+                                <img src="https://img.alicdn.com/tps/TB1bkFvNpXXXXXTapXXXXXXXXXX-262-84.png" style="width:131px;height:42px;">
+                                <a href="https://xue.alibaba-inc.com/trs/pin/brandHouse.htm?pinUid=294d8d92-e4be-4f12-81cf-866e18915060" target="_blank" style="display:inline-block;width:132px;word-break:break-all;height:90px;text-align:left;overflow:hidden;">https://xue.alibaba-inc.com/trs/pin/brandHouse.htm?pinUid=294d8d92-e4be-4f12-81cf-866e18915060</a>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+
 <script>
+    window.$ = window.jQuery = require('./js/jquery.js');
     require('./js/app.js')
 </script>
 </body>
