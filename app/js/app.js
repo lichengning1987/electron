@@ -1,5 +1,8 @@
 var fs = require('fs');
 const {clipboard} = require('electron');
+var path = require('path');
+var fileurl = path.join(__dirname, '', '../message.json');
+
 
 /*点击复制按钮，复制页面*/
 $("#copy").on("click",function(){
@@ -78,7 +81,7 @@ function writeFile() {
                  "PClink":pcLink
              }
         }
-    fs.writeFileSync('./app/message.json',
+    fs.writeFileSync(fileurl,
         JSON.stringify(jsonText), 'utf8');
 }
 
@@ -154,6 +157,8 @@ function firstFunc(){
             imgText.html(showText)
         });
 
+    $(".J_tb_threeArea .title").text($("#inputTitle-three").val());
+    $(".J_tb_threeArea .person").text($("#inputTitleEN-three").val());
       $(".J-wmimg img").attr("src",$("#wm2").val());
       $(".J-pclink a").attr("src",$("#PClink").val()).text($("#PClink").val());
 
